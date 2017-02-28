@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2014/03/05 15:16:46.108,=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 15:16:46.129,=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 15:17:51.414,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\USB_I2C_AT24C02.cpp=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 15:18:03.373,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\USB_I2C_AT24C02.h=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 15:18:10.310,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\USB_I2C_AT24C02.cbproj=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/03/05 15:20:13.701,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\Lib\Ginkgo_Driver.lib</Transaction>
+    <Transaction>2014/03/05 15:20:38.543,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\ControlI2C.h</Transaction>
+    <Transaction>2014/03/05 15:20:38.551,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AT24C02_SCTL\ErrorType.h</Transaction>
+  </Transactions>
+</BorlandProject>

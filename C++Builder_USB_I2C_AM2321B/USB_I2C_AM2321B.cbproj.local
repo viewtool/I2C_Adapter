@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2014/03/05 15:51:32.473,=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 15:51:32.477,=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 15:52:00.976,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\File1.cpp=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 15:52:07.688,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\USB_I2C_AM2321B.h=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 15:52:11.729,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\USB_I2C_AM2321B.cbproj=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/03/05 15:53:05.288,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\U2B.cpp=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\File1.cpp</Transaction>
+    <Transaction>2014/03/05 15:54:07.717,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\ControlI2C.h</Transaction>
+    <Transaction>2014/03/05 15:54:07.724,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\ErrorType.h</Transaction>
+    <Transaction>2014/03/05 15:54:07.727,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\USB_I2C_AM2321B.cpp</Transaction>
+    <Transaction>2014/03/05 15:54:16.641,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_AM2321B\Lib\Ginkgo_Driver.lib</Transaction>
+  </Transactions>
+</BorlandProject>

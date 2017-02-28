@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2014/03/05 16:17:41.238,=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 16:17:41.242,=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 16:18:13.155,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\USB_I2C_TEA5767.cpp=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 16:18:17.210,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\USB_I2C_TEA5767.h=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 16:18:22.317,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\USB_I2C_TEA5767.cbproj=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/03/05 16:18:29.832,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\ControlI2C.h</Transaction>
+    <Transaction>2014/03/05 16:18:29.835,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\ErrorType.h</Transaction>
+    <Transaction>2014/03/05 16:18:35.360,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_TEA5767\Lib\Ginkgo_Driver.lib</Transaction>
+  </Transactions>
+</BorlandProject>

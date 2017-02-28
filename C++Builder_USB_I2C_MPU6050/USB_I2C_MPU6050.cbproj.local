@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2014/03/05 16:03:50.343,=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 16:03:50.347,=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 16:05:32.345,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\USB_I2C_MPU6050.cpp=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 16:05:37.980,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\USB_I2C_MPU6050.h=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 16:05:43.300,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\USB_I2C_MPU6050.cbproj=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/03/05 16:06:24.794,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\ControlI2C.h</Transaction>
+    <Transaction>2014/03/05 16:06:24.797,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\ErrorType.h</Transaction>
+    <Transaction>2014/03/05 16:06:29.921,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo I2C\C++Builder_USB_I2C_MPU6050\Lib\Ginkgo_Driver.lib</Transaction>
+  </Transactions>
+</BorlandProject>

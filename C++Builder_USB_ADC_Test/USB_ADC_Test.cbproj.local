@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2014/03/05 17:13:56.946,=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 17:13:56.951,=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 17:14:35.939,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\USB_ADC_Test.cpp=C:\Users\Administrator\Documents\RAD Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2014/03/05 17:15:26.709,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\USB_ADC_Test.h=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/03/05 17:15:31.500,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\USB_ADC_Test.cbproj=C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/03/05 17:21:59.120,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\ControlADC.h</Transaction>
+    <Transaction>2014/03/05 17:21:59.123,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\ErrorType.h</Transaction>
+    <Transaction>2014/03/05 17:22:04.058,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\C++ Builder\Ginkgo ADC\C++Builder_USB_ADC_Test\Lib\Ginkgo_Driver.lib</Transaction>
+  </Transactions>
+</BorlandProject>
