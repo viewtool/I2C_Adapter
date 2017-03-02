@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/03/05 17:47:09.000.141,C:\Users\Administrator\Documents\RAD Studio\Projects\Project1.dproj=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\Delphi\Delphi_USB_I2C_AT24C02\USB_I2C_AT24C02.dproj</Transaction>
+    <Transaction>2014/03/05 18:15:36.000.366,=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\Delphi\Delphi_USB_I2C_AT24C02\Unit1.pas</Transaction>
+    <Transaction>2014/03/05 18:16:31.000.919,E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\Delphi\Delphi_USB_I2C_AT24C02\Unit1.pas=E:\Projects\Work\vt_ginkgo\truck\Ginkgo Application Example\Delphi\Delphi_USB_I2C_AT24C02\ControlI2C.pas</Transaction>
+  </Transactions>
+</BorlandProject>
