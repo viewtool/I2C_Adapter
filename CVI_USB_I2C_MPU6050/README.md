@@ -1,0 +1,2 @@
+# I2C_MPU6050
+An CVI project for MPU6050.
