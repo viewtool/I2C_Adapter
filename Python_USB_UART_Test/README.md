@@ -1,2 +1,2 @@
 # UART_Test
-An Python project to test UART.
+A Python project to test UART.

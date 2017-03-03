@@ -1,2 +1,2 @@
 # I2C_PCA9555
-An CVI project for PCA9555.
+A CVI project for PCA9555.

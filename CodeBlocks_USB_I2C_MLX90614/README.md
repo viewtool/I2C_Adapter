@@ -1,2 +1,2 @@
 # I2C_MLX90614
-An CodeBlocks project for MLX90614.
+A CodeBlocks project for MLX90614.

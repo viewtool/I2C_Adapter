@@ -1,2 +1,2 @@
 # PWM_Test
-An Python project to test PWM.
+A Python project to test PWM.

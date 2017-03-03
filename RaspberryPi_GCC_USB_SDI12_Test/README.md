@@ -1,2 +1,2 @@
 # SDI12_Test
-An RaspberryPi project to test SDI12.
+A RaspberryPi project to test SDI12.

@@ -1,2 +1,2 @@
 # CNT_Counter
-An VC project to test CNT Counter.
+A VC project to test CNT Counter.

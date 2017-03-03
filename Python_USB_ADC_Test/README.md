@@ -1,2 +1,2 @@
 # ADC_Test
-An Python project to test ADC.
+A Python project to test ADC.

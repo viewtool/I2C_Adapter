@@ -1,2 +1,2 @@
 # ADC_Test
-An CVI project to test ADC.
+A CVI project to test ADC.

@@ -1,2 +1,2 @@
 # I2C_HMC5883L
-An VC project for HMC5883L.
+A VC project for HMC5883L.

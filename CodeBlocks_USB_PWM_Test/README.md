@@ -1,2 +1,2 @@
 # PWM_Test
-An CodeBlocks project to test PWM.
+A CodeBlocks project to test PWM.

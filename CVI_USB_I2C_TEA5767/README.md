@@ -1,2 +1,2 @@
 # I2C_TEA5767
-An CVI project for TEA5767.
+A CVI project for TEA5767.

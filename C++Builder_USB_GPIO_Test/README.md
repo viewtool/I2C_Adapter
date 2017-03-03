@@ -1,2 +1,2 @@
 # GPIO_Test
-An C++Builder project to test GPIO.
+A C++Builder project to test GPIO.

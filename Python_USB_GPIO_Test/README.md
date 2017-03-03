@@ -1,2 +1,2 @@
 # GPIO_Test
-An Python project to test GPIO.
+A Python project to test GPIO.

@@ -1,2 +1,2 @@
 # GPIO_Test
-An MacOS project to test GPIO.
+A MacOS project to test GPIO.

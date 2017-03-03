@@ -1,2 +1,2 @@
 # PWM_Test
-An MacOS project to test PWM.
+A MacOS project to test PWM.

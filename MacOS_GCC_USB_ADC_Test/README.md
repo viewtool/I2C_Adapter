@@ -1,2 +1,2 @@
 # ADC_Test
-An MacOS project to test ADC.
+A MacOS project to test ADC.

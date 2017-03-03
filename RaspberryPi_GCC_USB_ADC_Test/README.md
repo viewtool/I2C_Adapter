@@ -1,2 +1,2 @@
 # ADC_Test
-An RaspberryPi project to test ADC.
+A RaspberryPi project to test ADC.

@@ -1,2 +1,2 @@
 # ADC_Test
-An LinuxGCC project to test ADC.
+A LinuxGCC project to test ADC.

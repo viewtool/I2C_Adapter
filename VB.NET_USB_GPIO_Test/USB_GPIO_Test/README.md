@@ -1,2 +1,2 @@
 # GPIO_Test
-An VB.NET project to test GPIO.
+A VB.NET project to test GPIO.

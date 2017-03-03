@@ -1,2 +1,2 @@
 # GPIO_Test
-An Labview project to test GPIO.
+A Labview project to test GPIO.

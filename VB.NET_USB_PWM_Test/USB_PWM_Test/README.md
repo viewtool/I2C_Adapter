@@ -1,2 +1,2 @@
 # PWM_Test
-An VB.NET project to test PWM.
+A VB.NET project to test PWM.

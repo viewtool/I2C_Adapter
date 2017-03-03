@@ -1,2 +1,2 @@
 # CNT_Frequency
-An VC project to test CNT Frequency.
+A VC project to test CNT Frequency.

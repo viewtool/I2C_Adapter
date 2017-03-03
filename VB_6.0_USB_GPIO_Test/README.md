@@ -1,2 +1,2 @@
 # GPIO_Test
-An VB_6.0 project to test GPIO.
+A VB_6.0 project to test GPIO.

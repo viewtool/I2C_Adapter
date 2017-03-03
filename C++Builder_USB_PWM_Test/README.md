@@ -1,2 +1,2 @@
 # PWM_Test
-An C++Builder project to test PWM.
+A C++Builder project to test PWM.

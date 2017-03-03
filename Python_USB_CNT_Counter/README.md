@@ -1,2 +1,2 @@
 # CNT_Counter
-An Python project to test CNT Counter.
+A Python project to test CNT Counter.

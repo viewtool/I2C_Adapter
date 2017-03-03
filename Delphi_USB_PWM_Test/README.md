@@ -1,2 +1,2 @@
 # PWM_Test
-An Delphi project to test PWM.
+A Delphi project to test PWM.

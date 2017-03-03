@@ -1,2 +1,2 @@
 # UART_Test
-An RaspberryPi project to test UART.
+A RaspberryPi project to test UART.

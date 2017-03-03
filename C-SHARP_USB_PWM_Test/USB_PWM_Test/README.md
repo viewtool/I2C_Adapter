@@ -1,2 +1,2 @@
 # PWM_Test
-An C# project to test PWM.
+A C# project to test PWM.

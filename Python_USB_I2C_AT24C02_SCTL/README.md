@@ -1,2 +1,2 @@
 # I2C_AT24C02_SCTL
-An Python project for AT24C02_SCTL.
+A Python project for AT24C02_SCTL.

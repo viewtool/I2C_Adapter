@@ -1,2 +1,2 @@
 # I2C_BH1750FVI
-An RaspberryPi project for BH1750FVI.
+A RaspberryPi project for BH1750FVI.

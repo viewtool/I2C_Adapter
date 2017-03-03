@@ -1,2 +1,2 @@
 # GPIO_Test
-An CodeBlocks project to test GPIO.
+A CodeBlocks project to test GPIO.

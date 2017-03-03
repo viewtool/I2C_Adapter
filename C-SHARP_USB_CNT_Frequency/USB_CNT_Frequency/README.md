@@ -1,2 +1,2 @@
 # CNT_Frequency
-An C# project to test CNT_Frequency.
+A C# project to test CNT_Frequency.

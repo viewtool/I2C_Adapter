@@ -1,2 +1,2 @@
 # SDI12_Test
-An LinuxGCC project to test SDI12.
+A LinuxGCC project to test SDI12.

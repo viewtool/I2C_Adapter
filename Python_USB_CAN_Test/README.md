@@ -1,2 +1,2 @@
 # CAN_Test
-An Python project to test CAN.
+A Python project to test CAN.

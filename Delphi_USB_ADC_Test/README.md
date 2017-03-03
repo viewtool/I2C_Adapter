@@ -1,2 +1,2 @@
 # ADC_Test
-An Delphi project to test ADC.
+A Delphi project to test ADC.

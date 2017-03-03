@@ -1,2 +1,2 @@
 # CNT_Frequency
-An RaspberryPi project to test CNT Frequency.
+A RaspberryPi project to test CNT Frequency.

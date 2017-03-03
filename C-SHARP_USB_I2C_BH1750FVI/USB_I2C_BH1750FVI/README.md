@@ -1,2 +1,2 @@
 # I2C_BH1750FVI
-An C# project for BH1750FVI.
+A C# project for BH1750FVI.

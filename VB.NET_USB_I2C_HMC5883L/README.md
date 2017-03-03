@@ -1,2 +1,2 @@
 # I2C_HMC5883L
-An VB.NET project for HMC5883L.
+A VB.NET project for HMC5883L.

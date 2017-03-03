@@ -1,2 +1,2 @@
 # I2C_AT24C02_SCTL
-An MacOS project for AT24C02_SCTL.
+A MacOS project for AT24C02_SCTL.

@@ -1,2 +1,2 @@
 # I2C_PCA9555
-An VC project for PCA9555.
+A VC project for PCA9555.

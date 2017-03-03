@@ -1,2 +1,2 @@
 # SDI12_Test
-An MacOS project to test SDI12.
+A MacOS project to test SDI12.

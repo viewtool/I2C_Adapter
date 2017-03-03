@@ -1,2 +1,2 @@
 # CNT_Frequency
-An LinuxGCC project to test CNT Frequency.
+A LinuxGCC project to test CNT Frequency.

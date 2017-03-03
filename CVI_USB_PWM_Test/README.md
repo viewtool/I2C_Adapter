@@ -1,2 +1,2 @@
 # PWM_Test
-An CVI project to test PWM.
+A CVI project to test PWM.

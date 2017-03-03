@@ -1,2 +1,2 @@
 # I2C_MPU6050
-An VB.NET project for MPU6050.
+A VB.NET project for MPU6050.

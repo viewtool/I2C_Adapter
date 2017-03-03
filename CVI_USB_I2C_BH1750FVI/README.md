@@ -1,2 +1,2 @@
 # I2C_BH1750FVI
-An CVI project for BH1750FVI.
+A CVI project for BH1750FVI.

@@ -1,2 +1,2 @@
 # I2C_PCA9555
-An VB.NET project for PCA9555.
+A VB.NET project for PCA9555.

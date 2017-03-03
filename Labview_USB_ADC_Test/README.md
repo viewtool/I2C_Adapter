@@ -1,2 +1,2 @@
 # ADC_Test
-An Labview project to test ADC.
+A Labview project to test ADC.

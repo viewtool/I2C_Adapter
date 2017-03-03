@@ -1,2 +1,2 @@
 # I2C_AT24C02_SCTL
-An VC project for AT24C02_SCTL.
+A VC project for AT24C02_SCTL.

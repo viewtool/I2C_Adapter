@@ -1,2 +1,2 @@
 # CNT_Counter
-An LinuxGCC project to test CNT Counter.
+A LinuxGCC project to test CNT Counter.

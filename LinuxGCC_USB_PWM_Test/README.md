@@ -1,2 +1,2 @@
 # PWM_Test
-An LinuxGCC project to test PWM.
+A LinuxGCC project to test PWM.

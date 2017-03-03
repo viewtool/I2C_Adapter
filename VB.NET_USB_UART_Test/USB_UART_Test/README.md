@@ -1,2 +1,2 @@
 # UART_Test
-An VB.NET project to test UART.
+A VB.NET project to test UART.

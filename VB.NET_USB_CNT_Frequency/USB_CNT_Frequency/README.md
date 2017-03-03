@@ -1,2 +1,2 @@
 # CNT_Frequency
-An VB.NET project to test CNT Frequency.
+A VB.NET project to test CNT Frequency.

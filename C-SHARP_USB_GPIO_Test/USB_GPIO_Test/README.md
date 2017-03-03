@@ -1,2 +1,2 @@
 # GPIO_Test
-An C# project to test GPIO.
+A C# project to test GPIO.
