@@ -1,0 +1,2 @@
+# I2C_HMC5883L
+An MacOS project for HMC5883L.
