@@ -91,7 +91,7 @@ J11_P17_GPIO,J11_P18_GPIO,J11_P19_GPIO,J11_P20_GPIO,
 J11_P21_GPIO,J11_P22_GPIO,J11_P23_GPIO,J11_P24_GPIO,
 J11_P25_GPIO,J11_P26_GPIO,
 
-J42_GPIO,J43_GPIO,J44_GPIO,
+J42_GPIO,J43_GPIO,J44_GPIO,NULL,
 };
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -112,32 +112,33 @@ int _tmain(int argc, _TCHAR* argv[])
         return ret;
     }
 	// Set GPIO_7 and GPIO_8 to output 
-	ret = VGI_SetOutputEx(VGI_USBGPIO, 0,J18_P3_GPIO);
+	ret = VGI_SetOutputEx(VGI_USBGPIO, 0, VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
 	if (ret != ERR_SUCCESS)
 	{
 		printf("Set pin output error!\n");
 		return ret;
 	}
-	// Set GPIO_7 and GPIO_8 
-	ret = VGI_SetPinsEx(VGI_USBGPIO, 0, J18_P3_GPIO);
-	if (ret != ERR_SUCCESS)
+	while(1)
 	{
-		printf("Set pin high error!\n");
-		return ret;
-	}else{
-		printf("Set pin high success!\n");
-		system("pause");
-	}
-	
-	// Reset GPIO_7 and GPIO_8 
-	ret = VGI_ResetPinsEx(VGI_USBGPIO, 0, J18_P3_GPIO);
-	if (ret != ERR_SUCCESS)
-	{
-		printf("Set pin low error!\n");
-		return ret;
-	}else{
-		printf("Set pin low success!\n");	
-		system("pause");
+		// Reset GPIO_7 and GPIO_8 
+		ret = VGI_SetPinsEx(VGI_USBGPIO, 0, VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin high error!\n");
+			return ret;
+		}else{
+			printf("Set pin high success!\n");	
+		}
+		Sleep(1000);
+		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,  VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Reset pin low error!\n");
+			return ret;
+		}else{
+			printf("Reset pin low success!\n");	
+		}	
+		Sleep(1000);
 	}
     //πÿ±’…Ë±∏
     ret = VGI_CloseDevice(VGI_USBGPIO, 0);
