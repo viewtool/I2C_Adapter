@@ -17,7 +17,7 @@
 #include "stdafx.h"
 #include "ControlGPIO.h"
 #include "func_map.h"
-uint32_t GPIO_Test[]={
+uint32_t gpio_channel[]={
 J15_P1_GPIO,J15_P2_GPIO,J15_P3_GPIO,J15_P4_GPIO,
 J15_P5_GPIO,J15_P6_GPIO,J15_P7_GPIO,J15_P8_GPIO,
 J15_P9_GPIO,J15_P10_GPIO,J15_P11_GPIO,
@@ -46,11 +46,15 @@ J50_P14_GPIO,J50_P15_GPIO,J50_P16_GPIO,
 J28_P1_GPIO,J28_P2_GPIO,J28_P3_GPIO,J28_P4_GPIO,
 J28_P5_GPIO,J28_P6_GPIO,J33_P1_GPIO,
 
-J5_P1_GPIO,J5_P2_GPIO,J5_P3_GPIO,J5_P4_GPIO,
-J5_P5_GPIO,J5_P6_GPIO,J5_P7_GPIO,J5_P8_GPIO,
+J5_P1_GPIO,
+//J5_P2_GPIO,
+J5_P3_GPIO,
+J5_P4_GPIO,
+J5_P5_GPIO,J5_P6_GPIO,J5_P7_GPIO,
+J5_P8_GPIO,
 
 J17_P1_GPIO,J17_P2_GPIO,J17_P3_GPIO,J17_P4_GPIO,
-J17_P5_GPIO,J17_P6_GPIO,J17_P7_GPIO,
+J17_P5_GPIO,J17_P6_GPIO,//J17_P7_GPIO,
 
 J45_GPIO,J46_GPIO,J47_GPIO,J48_GPIO,
 
@@ -69,8 +73,10 @@ J20_P21_GPIO,
 J21_P1_GPIO ,J21_P2_GPIO ,J21_P3_GPIO ,J21_P4_GPIO,
 J21_P5_GPIO ,J21_P6_GPIO ,J21_P7_GPIO ,J21_P8_GPIO,
 J21_P9_GPIO ,J21_P10_GPIO,J21_P11_GPIO,J21_P12_GPIO,
-J21_P13_GPIO,J21_P14_GPIO,J21_P15_GPIO,J21_P16_GPIO,
-J21_P17_GPIO,J21_P18_GPIO,J21_P19_GPIO,J21_P20_GPIO,
+//J21_P13_GPIO,
+//J21_P14_GPIO,
+J21_P15_GPIO,J21_P16_GPIO,J21_P17_GPIO,J21_P18_GPIO,
+J21_P19_GPIO,J21_P20_GPIO,
 J21_P21_GPIO,J21_P22_GPIO,
 
 J22_P1_GPIO ,J22_P2_GPIO ,J22_P3_GPIO ,J22_P4_GPIO,
@@ -79,7 +85,9 @@ J22_P9_GPIO ,J22_P10_GPIO,J22_P11_GPIO,J22_P12_GPIO,
 J22_P13_GPIO,J22_P14_GPIO,J22_P15_GPIO,J22_P16_GPIO,
 J22_P17_GPIO,J22_P18_GPIO,
 
-J14_P1_GPIO ,J14_P2_GPIO ,J14_P3_GPIO ,J14_P4_GPIO,
+//J14_P1_GPIO ,
+J14_P2_GPIO ,J14_P3_GPIO ,
+J14_P4_GPIO,
 J14_P5_GPIO ,J14_P6_GPIO ,J14_P7_GPIO ,J14_P8_GPIO,
 J14_P9_GPIO ,J14_P10_GPIO,J14_P11_GPIO,
 
@@ -91,12 +99,13 @@ J11_P17_GPIO,J11_P18_GPIO,J11_P19_GPIO,J11_P20_GPIO,
 J11_P21_GPIO,J11_P22_GPIO,J11_P23_GPIO,J11_P24_GPIO,
 J11_P25_GPIO,J11_P26_GPIO,
 
-J42_GPIO,J43_GPIO,J44_GPIO,NULL,
+J42_GPIO,J43_GPIO,J44_GPIO,
 };
 
 int _tmain(int argc, _TCHAR* argv[])
 {
     int ret = 0,i = 0;
+	uint16_t data = 0;
     // Scan connected device
     ret = VGI_ScanDevice(1);
     if (ret <= 0)
@@ -111,34 +120,35 @@ int _tmain(int argc, _TCHAR* argv[])
         printf("Open device error!\n");
         return ret;
     }
-	// Set GPIO_7 and GPIO_8 to output 
-	ret = VGI_SetOutputEx(VGI_USBGPIO, 0, VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
-	if (ret != ERR_SUCCESS)
+	for(i=0x00;i<(sizeof(gpio_channel)/4);i++)
 	{
-		printf("Set pin output error!\n");
-		return ret;
-	}
-	while(1)
-	{
-		// Reset GPIO_7 and GPIO_8 
-		ret = VGI_SetPinsEx(VGI_USBGPIO, 0, VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
+		// Set GPIO_7 and GPIO_8 to output 
+		ret = VGI_SetOutputEx(VGI_USBGPIO, 0,gpio_channel[i]);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin output error!\n");
+			return ret;
+		}
+		// Set GPIO_7 and GPIO_8 
+		ret = VGI_SetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin high error!\n");
 			return ret;
 		}else{
-			printf("Set pin high success!\n");	
+			printf("Set pin high success!\n");
+			system("pause");
 		}
-		Sleep(1000);
-		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,  VGI_GPIO_PORTA|VGI_GPIO_PIN6|VGI_GPIO_PIN7);
+		// Reset GPIO_7 and GPIO_8 
+		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
 		if (ret != ERR_SUCCESS)
 		{
-			printf("Reset pin low error!\n");
+			printf("Set pin low error!\n");
 			return ret;
 		}else{
-			printf("Reset pin low success!\n");	
+			printf("Set pin low success!\n");	
+			system("pause");
 		}	
-		Sleep(1000);
 	}
     //¹Ø±ÕÉè±¸
     ret = VGI_CloseDevice(VGI_USBGPIO, 0);
