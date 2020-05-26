@@ -86,6 +86,11 @@ int32_t	WINAPI VGI_SetOpenDrain(int32_t DevType,int32_t DevIndex,uint16_t PinMas
 int32_t	 WINAPI VGI_SetOutputEx(int32_t DevType,int32_t DevIndex,uint32_t PinMask); 
 int32_t	 WINAPI VGI_SetPinsEx(int32_t DevType,int32_t DevIndex, uint32_t PinMask); 
 int32_t	 WINAPI VGI_ResetPinsEx(int32_t DevType,int32_t DevIndex,uint32_t PinMask); 
+int32_t	WINAPI VGI_SetOpenDrainEx(int32_t DevType,int32_t DevIndex,uint32_t Pins);
+int32_t	WINAPI VGI_SetInputEx(int32_t DevType,int32_t DevIndex,uint32_t Pins);
+int32_t WINAPI VGI_WriteDatasEx(int32_t DevType,int32_t DevIndex, uint32_t PinMask,uint32_t Data);
+int32_t WINAPI VGI_ReadDatasEx(int32_t DevType,int32_t DevIndex,uint32_t PinMask,uint16_t *pData);
+
 #ifdef __cplusplus
 }
 #endif

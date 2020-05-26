@@ -164,7 +164,7 @@ J42_GPIO,J43_GPIO,J44_GPIO,
 //#define DELAY_MS    200
 
 //
-#define DELAY_MS    2
+#define DELAY_MS   0
 
 void vt_delay(int ms)
 {
@@ -211,7 +211,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			printf("Set pin high error!\n");
 			return ret;
 		}else{
-			printf("Set pin high success!\n");
+			//printf("Set pin high success!\n");
 			vt_delay(DELAY_MS); 
 		}
 		// Set pin output low 
@@ -221,9 +221,81 @@ int _tmain(int argc, _TCHAR* argv[])
 			printf("Set pin low error!\n");
 			return ret;
 		}else{
-			printf("Set pin low success!\n");	
+			//printf("Set pin low success!\n");	
 			vt_delay(DELAY_MS); 
 		}	
+	}
+
+	// configue each pin as input 
+	for(i=0x00;i<pin_num;i++)
+	{
+		ret = VGI_SetInputEx(VGI_USBGPIO, 0,gpio_channel[i]);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin output error!\n");
+			return ret;
+		}
+	}
+
+	for(i=0x00;i<pin_num;i++)
+	{
+		// Get pin value 
+		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,gpio_channel[i],&data);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin high error!\n");
+			return ret;
+		}else{
+			//printf("Set pin high success!\n");
+			vt_delay(DELAY_MS); 
+		}
+	}
+
+	// configue each pin as input 
+	for(i=0x00;i<pin_num;i++)
+	{
+		ret = VGI_SetOpenDrainEx(VGI_USBGPIO, 0,gpio_channel[i]);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin output error!\n");
+			return ret;
+		}
+	}
+	for(i=0x00;i<pin_num;i++)
+	{
+		// Set pin output high 
+		ret = VGI_SetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin high error!\n");
+			return ret;
+		}else{
+			//printf("Set pin high success!\n");
+			vt_delay(DELAY_MS); 
+		}
+		// Set pin output low 
+		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin low error!\n");
+			return ret;
+		}else{
+			//printf("Set pin low success!\n");	
+			vt_delay(DELAY_MS); 
+		}	
+	}
+	for(i=0x00;i<pin_num;i++)
+	{
+		// Get pin value 
+		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,gpio_channel[i],&data);
+		if (ret != ERR_SUCCESS)
+		{
+			printf("Set pin high error!\n");
+			return ret;
+		}else{
+			//printf("Set pin high success!\n");
+			vt_delay(DELAY_MS); 
+		}
 	}
     // close device
     ret = VGI_CloseDevice(VGI_USBGPIO, 0);
