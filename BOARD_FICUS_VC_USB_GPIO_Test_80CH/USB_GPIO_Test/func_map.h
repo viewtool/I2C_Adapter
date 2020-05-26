@@ -1,10 +1,6 @@
 #ifndef _FUNC_MAP_H
 #define _FUNC_MAP_H
 
-
-/* Ficus_PIN_MAPPING
- * Pinout:http://www.viewtool.com/demo/STM32/Ficus_document_html/d5/db5/ficuspinout.html
-*/
 /*
 *** GPIO Definition Table
 	*/
