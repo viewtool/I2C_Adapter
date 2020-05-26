@@ -232,7 +232,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		ret = VGI_SetInputEx(VGI_USBGPIO, 0,gpio_channel[i]);
 		if (ret != ERR_SUCCESS)
 		{
-			printf("Set pin output error!\n");
+			printf("Set pin input error!\n");
 			return ret;
 		}
 	}
@@ -243,21 +243,20 @@ int _tmain(int argc, _TCHAR* argv[])
 		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,gpio_channel[i],&data);
 		if (ret != ERR_SUCCESS)
 		{
-			printf("Set pin high error!\n");
+			printf("Get pin value error!\n");
 			return ret;
 		}else{
-			//printf("Set pin high success!\n");
 			vt_delay(DELAY_MS); 
 		}
 	}
 
-	// configue each pin as input 
+	// configue each pin as opendrain 
 	for(i=0x00;i<pin_num;i++)
 	{
 		ret = VGI_SetOpenDrainEx(VGI_USBGPIO, 0,gpio_channel[i]);
 		if (ret != ERR_SUCCESS)
 		{
-			printf("Set pin output error!\n");
+			printf("Set pin opendrain error!\n");
 			return ret;
 		}
 	}
@@ -290,7 +289,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,gpio_channel[i],&data);
 		if (ret != ERR_SUCCESS)
 		{
-			printf("Set pin high error!\n");
+			printf("Get pin value error!\n");
 			return ret;
 		}else{
 			//printf("Set pin high success!\n");

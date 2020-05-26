@@ -63,7 +63,10 @@ typedef  struct  _VGI_BOARD_INFO{
 	uint8_t		SerialNumber[12];	// The adapter serial number
 } VGI_BOARD_INFO,*PVGI_BOARD_INFO; 
 
-
+#define VGI_GPIO_MODE_IN_PULL_UP        (0) 
+#define VGI_GPIO_MODE_OUT_PUSH          (1) 
+#define VGI_GPIO_MODE_OUT_OPENDRAIN     (2) 
+#define VGI_GPIO_MODE_IN_FLOAT          (3) 
 
 #ifdef __cplusplus
 extern "C"
