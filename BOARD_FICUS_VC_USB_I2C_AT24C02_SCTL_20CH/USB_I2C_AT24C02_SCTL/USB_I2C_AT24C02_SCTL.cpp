@@ -33,10 +33,12 @@
 #include "func_map.h"
 
 
-uint8_t i2c_num[]={
+uint8_t i2c_channel[]={
 J28_P2_P4_I2C_STL_CH0,J50_P6_P8_I2C_STL_CH1,J50_P10_P12_I2C_STL_CH2,J50_P14_P16_I2C_STL_CH3,
 J50_P1_P3_I2C_STL_CH4,J50_P5_P7_I2C_STL_CH5,J50_P9_P10_I2C_STL_CH6,J50_P13_P15_I2C_STL_CH7,
-J18_P1_P5_I2C_STL_CH8,J18_P4_P6_I2C_STL_CH9,
+J18_P1_P5_I2C_STL_CH8,J18_P4_P6_I2C_STL_CH9,J8_P1_P3_I2C_STL_CH10,J8_P5_J50_P4_I2C_STL_CH11,
+J8_P2_P4_I2C_STL_CH12,J8_P6_P8_I2C_STL_CH13,J1_P1_P2_I2C_STL_CH14,J2_P7_P9_I2C_STL_CH15,
+J2_P17_P19_I2C_STL_CH16,J2_P8_P10_I2C_STL_CH17,J2_P12_P14_I2C_STL_CH18,J5_P1_P7_I2C_STL_CH19,
 };
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -59,7 +61,7 @@ int _tmain(int argc, _TCHAR* argv[])
         printf("Open device error!\n");
         return ret;
     }
-	for(j=0;j<20;j--)
+	for(j=0;j<20;j++)
 	{
 		//Initializes the device
 		I2C_Config.AddrType = VII_ADDR_7BIT;
@@ -67,7 +69,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		I2C_Config.ControlMode = VII_SCTL_MODE;
 		I2C_Config.MasterMode = VII_MASTER;
 		I2C_Config.SubAddrWidth = VII_SUB_ADDR_1BYTE;
-		ret = VII_InitI2C(VII_USBI2C, 0, J28_P2_P4_I2C_STL_CH0, &I2C_Config);
+		ret = VII_InitI2C(VII_USBI2C, 0, i2c_channel[j], &I2C_Config);
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Initialize device error!\n");
@@ -81,7 +83,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		I2C_TimeConfig.tSU_DAT = 1;
 		I2C_TimeConfig.tSU_STO = 4;
 		I2C_TimeConfig.tBuf = 5;  
-		ret = VII_TimeConfig(VII_USBI2C, 0, J28_P2_P4_I2C_STL_CH0, &I2C_TimeConfig);
+		ret = VII_TimeConfig(VII_USBI2C, 0, i2c_channel[j], &I2C_TimeConfig);
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set time error!\n");
@@ -92,7 +94,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			write_buffer[i] = i;
 		}
-		ret = VII_WriteBytes(VII_USBI2C, 0, J28_P2_P4_I2C_STL_CH0, 0xA0, 0x00, write_buffer, 8);
+		ret = VII_WriteBytes(VII_USBI2C, 0, i2c_channel[j], 0xA0, 0x00, write_buffer, 8);
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Write data error!\n");
@@ -101,7 +103,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		//Delay
 		Sleep(10);
 		//Read 8 byte data from 0x00
-		ret = VII_ReadBytes(VII_USBI2C, 0,J28_P2_P4_I2C_STL_CH0, 0xA0, 0x00, read_buffer, 8);
+		ret = VII_ReadBytes(VII_USBI2C, 0,i2c_channel[j], 0xA0, 0x00, read_buffer, 8);
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Read data error!\n");
@@ -109,7 +111,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		else
 		{
-			printf("Read Data:\n");
+			printf("Channel = %d Read Data:\n",j);
 			for(i=0;i<8;i++)
 			{
 				printf("%02X ",read_buffer[i]);
