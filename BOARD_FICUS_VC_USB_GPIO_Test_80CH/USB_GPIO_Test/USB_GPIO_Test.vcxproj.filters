@@ -42,4 +42,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="E:\vc2005\vt\vt_ginkgo_driver\ginkgo_driver\Ginkgo Driver\vs2010\Ginkgo_Driver\Debug\Ginkgo_Driver.lib" />
+  </ItemGroup>
 </Project>

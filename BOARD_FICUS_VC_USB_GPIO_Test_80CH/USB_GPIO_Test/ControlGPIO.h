@@ -90,6 +90,7 @@ int32_t	WINAPI VGI_SetOpenDrainEx(int32_t DevType,int32_t DevIndex,uint32_t Pins
 int32_t	WINAPI VGI_SetInputEx(int32_t DevType,int32_t DevIndex,uint32_t Pins);
 int32_t WINAPI VGI_WriteDatasEx(int32_t DevType,int32_t DevIndex, uint32_t PinMask,uint32_t Data);
 int32_t WINAPI VGI_ReadDatasEx(int32_t DevType,int32_t DevIndex,uint32_t PinMask,uint16_t *pData);
+int32_t WINAPI VGI_BLE_Enable(int32_t DevType,int32_t DevIndex,uint8_t BleOn); 
 #ifdef __cplusplus
 }
 #endif

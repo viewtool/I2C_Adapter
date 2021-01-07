@@ -66,11 +66,15 @@
 #include "ControlGPIO.h"
 #include "func_map.h"
 
+#define VT_G3_FICUS     0
+#define VT_G3           1
+
 /*
    gpio_channel: defined all pins used in this program, each pin definition is 32bits, 16bits for port, 16bits for pin index, 
    for stm32f105vct: port: => GPIOA - GPIOE
                      pin index: => GPIO_PIN0 - GPIO_PIN15
 */
+#if VT_G3_FICUS
 uint32_t gpio_channel[]={
 J15_P1_GPIO,J15_P2_GPIO,J15_P3_GPIO,J15_P4_GPIO,
 J15_P5_GPIO,J15_P6_GPIO,J15_P7_GPIO,J15_P8_GPIO,
@@ -156,6 +160,30 @@ J11_P25_GPIO,J11_P26_GPIO,
 
 J42_GPIO,J43_GPIO,J44_GPIO,
 };
+#endif 
+
+#if VT_G3
+// Define GPIO pin
+// refer: http://www.viewtool.com/wiki/index.php/Ginkgo3_adapter_pinout_definition
+
+#define	VGI_GPIO_PIN0		(1<<0)	//GPIO_0
+#define	VGI_GPIO_PIN1		(1<<1)	//GPIO_1
+#define	VGI_GPIO_PIN2		(1<<2)	//GPIO_2
+#define	VGI_GPIO_PIN3		(1<<3)	//GPIO_3
+#define	VGI_GPIO_PIN4		(1<<4)	//GPIO_4
+#define	VGI_GPIO_PIN5		(1<<5)	//GPIO_5
+#define	VGI_GPIO_PIN6		(1<<6)	//GPIO_6
+#define	VGI_GPIO_PIN7		(1<<7)	//GPIO_7
+#define	VGI_GPIO_PIN8		(1<<8)	//GPIO_8
+#define	VGI_GPIO_PIN9		(1<<9)	//GPIO_9
+#define	VGI_GPIO_PIN10		(1<<10)	//GPIO_10
+#define	VGI_GPIO_PIN11		(1<<11)	//GPIO_11
+#define	VGI_GPIO_PIN12		(1<<12)	//GPIO_12
+#define	VGI_GPIO_PIN13		(1<<13)	//GPIO_13
+#define	VGI_GPIO_PIN14		(1<<14)	//GPIO_14
+#define	VGI_GPIO_PIN15		(1<<15)	//GPIO_15
+#define	VGI_GPIO_PIN_ALL	(0xFFFF)//ALL PIN
+#endif 
 
 // test at highest speed (high requency waveform output)
 //#define DELAY_MS    0  
@@ -175,7 +203,11 @@ int _tmain(int argc, _TCHAR* argv[])
 {
     int ret = 0,i = 0;
 	uint16_t data = 0;
+#if VT_G3_FICUS
 	int pin_num = (sizeof(gpio_channel)/4); 
+#else
+	int pin_num = 2; 
+#endif 
     // Scan connected device
     ret = VGI_ScanDevice(1);
     if (ret <= 0)
@@ -190,11 +222,36 @@ int _tmain(int argc, _TCHAR* argv[])
         printf("Open device error!\n");
         return ret;
     }
+	while(1)
+	{
+		VGI_BLE_Enable(VGI_USBGPIO, 0, 1);
+		Sleep(10000);
+		VGI_BLE_Enable(VGI_USBGPIO, 0, 0);
+		Sleep(10000);
+	}
+	
+#if VT_G3_FICUS
+	ret = VGI_SetOutputEx(VGI_USBGPIO, 0,VGI_GPIO_PORTA|VGI_GPIO_PIN0);
+	ret = VGI_SetPinsEx(VGI_USBGPIO, 0,VGI_GPIO_PORTA|VGI_GPIO_PIN0);
+	ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,VGI_GPIO_PORTA|VGI_GPIO_PIN0);
+#endif 
+#if VT_G3
+	ret = VGI_SetOutput(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+	ret = VGI_SetPins(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+	ret = VGI_ResetPins(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
 
+	ret = VGI_SetInput(VGI_USBGPIO, 0,VGI_GPIO_PIN8 | VGI_GPIO_PIN9| VGI_GPIO_PIN10);
+	ret = VGI_ReadDatas(VGI_USBGPIO, 0,VGI_GPIO_PIN8 | VGI_GPIO_PIN9| VGI_GPIO_PIN10,&data);
+
+#endif 
 	// configue each pin as output 
 	for(i=0x00;i<pin_num;i++)
 	{
+#if VT_G3_FICUS
 		ret = VGI_SetOutputEx(VGI_USBGPIO, 0,gpio_channel[i]);
+#else 
+		ret = VGI_SetOutputEx(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+#endif 
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin output error!\n");
@@ -205,7 +262,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	for(i=0x00;i<pin_num;i++)
 	{
 		// Set pin output high 
+#if VT_G3_FICUS
 		ret = VGI_SetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
+#else 
+		ret = VGI_SetPinsEx(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+#endif 
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin high error!\n");
@@ -215,7 +276,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			vt_delay(DELAY_MS); 
 		}
 		// Set pin output low 
+#if VT_G3_FICUS
 		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,gpio_channel[i]);
+#else 
+		ret = VGI_ResetPinsEx(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+#endif 
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin low error!\n");
@@ -229,7 +294,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	// configue each pin as output 
 	for(i=0x00;i<pin_num;i++)
 	{
+#if VT_G3_FICUS
 		ret = VGI_SetInputEx(VGI_USBGPIO, 0,gpio_channel[i]);
+#else 
+		ret = VGI_SetInputEx(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8);
+#endif 
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin output error!\n");
@@ -240,7 +309,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	for(i=0x00;i<pin_num;i++)
 	{
 		// Set pin output high 
+#if VT_G3_FICUS
 		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,gpio_channel[i],&data);
+#else 
+		ret = VGI_ReadDatasEx(VGI_USBGPIO, 0,VGI_GPIO_PIN7 | VGI_GPIO_PIN8,&data);
+#endif 
 		if (ret != ERR_SUCCESS)
 		{
 			printf("Set pin high error!\n");

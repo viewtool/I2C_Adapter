@@ -89,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="USB_GPIO_Test.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="E:\vc2005\vt\vt_ginkgo_driver\ginkgo_driver\Ginkgo Driver\vs2010\Ginkgo_Driver\Debug\Ginkgo_Driver.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
